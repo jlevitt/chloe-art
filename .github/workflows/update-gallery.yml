@@ -1,0 +1,43 @@
+name: Update Gallery
+
+on:
+  push:
+    paths:
+      - 'images/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate images.json
+        run: |
+          python3 - <<'EOF'
+          import json, os, re
+
+          exts = {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif'}
+          files = sorted([
+            f for f in os.listdir('images')
+            if os.path.splitext(f)[1].lower() in exts
+          ])
+
+          def to_title(name):
+            stem = os.path.splitext(name)[0]
+            return re.sub(r'[-_]+', ' ', stem).title()
+
+          entries = [{"src": f"images/{f}", "title": to_title(f)} for f in files]
+          with open('images.json', 'w') as out:
+            json.dump(entries, out, indent=2)
+          print(f"Found {len(entries)} images")
+          EOF
+
+      - name: Commit updated images.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add images.json
+          git diff --staged --quiet || git commit -m "chore: update gallery index [skip ci]"
+          git push
