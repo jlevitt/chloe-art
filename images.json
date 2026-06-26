@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "src": "images/dog-hurting-cats.jpg",
+    "title": "Dog Hurting Cats"
+  },
+  {
+    "src": "images/maelstrom.jpg",
+    "title": "Maelstrom"
+  }
+]
