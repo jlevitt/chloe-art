@@ -8,12 +8,28 @@
     "title": "Bear Loves Cake"
   },
   {
+    "src": "images/chloe.jpg",
+    "title": "Chloe"
+  },
+  {
     "src": "images/dog-hurting-cats.jpg",
     "title": "Dog Hurting Cats"
   },
   {
     "src": "images/emojis.jpg",
     "title": "Emojis"
+  },
+  {
+    "src": "images/fathers-day.jpg",
+    "title": "Fathers Day"
+  },
+  {
+    "src": "images/headphones.jpg",
+    "title": "Headphones"
+  },
+  {
+    "src": "images/kangaroos.jpg",
+    "title": "Kangaroos"
   },
   {
     "src": "images/kermit.jpg",
@@ -26,5 +42,9 @@
   {
     "src": "images/nature-walk.jpg",
     "title": "Nature Walk"
+  },
+  {
+    "src": "images/scribbles.jpg",
+    "title": "Scribbles"
   }
 ]
