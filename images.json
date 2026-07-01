@@ -4,11 +4,27 @@
     "title": "Animals And Nature"
   },
   {
+    "src": "images/bear-loves-cake.jpg",
+    "title": "Bear Loves Cake"
+  },
+  {
     "src": "images/dog-hurting-cats.jpg",
     "title": "Dog Hurting Cats"
   },
   {
+    "src": "images/emojis.jpg",
+    "title": "Emojis"
+  },
+  {
+    "src": "images/kermit.jpg",
+    "title": "Kermit"
+  },
+  {
     "src": "images/maelstrom.jpg",
     "title": "Maelstrom"
+  },
+  {
+    "src": "images/nature-walk.jpg",
+    "title": "Nature Walk"
   }
 ]
